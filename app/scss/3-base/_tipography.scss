@@ -1,0 +1,94 @@
+.is {
+    &-size {
+      &-1 {
+        font-size: $p1-font-size;
+      }
+  
+      &-2 {
+        font-size: $p2-font-size;
+      }
+  
+      &-3 {
+        font-size: $p3-font-size;
+      }
+  
+      &-4 {
+        font-size: $p4-font-size;
+      }
+  
+      &-5 {
+        font-size: $p5-font-size;
+      }
+  
+      &-semibold {
+        font-weight: 600;
+      }
+  
+      &-bold {
+        font-weight: 700;
+      }
+  
+      &-extrabold {
+        font-weight: 800;
+      }
+    }
+  
+    &-light {
+      font-weight: 200;
+    }
+  
+    &-regular {
+      font-weight: 400;
+    }
+  
+    &-semibold {
+      font-weight: 600;
+    }
+  
+    &-bold {
+      font-weight: 700;
+    }
+  
+    &-extrabold {
+      font-weight: 800;
+    }
+  }
+  
+  .fs- {
+    &1 {
+      font-size: $h1-font-size;
+    }
+  
+    &2 {
+      font-size: $h2-font-size;
+    }
+  
+    &3 {
+      font-size: $h3-font-size;
+      line-height: 1em;
+  
+      @include mediaMax(sm) {
+        font-size: $h4-font-size;
+      }
+    }
+  
+    &4 {
+      font-size: $h4-font-size;
+  
+      @include mediaMax(sm) {
+        font-size: $h5-font-size;
+      }
+    }
+  
+    &5 {
+      font-size: $h5-font-size;
+    }
+  }
+  
+  .text-upperCase {
+    text-transform: uppercase;
+  }
+  
+  .italic {
+    font-style: italic;
+  }

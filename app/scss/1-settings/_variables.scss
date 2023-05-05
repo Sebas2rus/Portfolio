@@ -1,0 +1,111 @@
+/* =====================
+    * FONTS *
+===================== */
+
+$font-SpaceMono: 'Space Mono', monospace;
+$font-WorkSans: 'Work Sans', sans-serif;
+/* =====================
+    * COLORS EXPLORA ANTIOQUIA *
+===================== */
+
+$white-1: #fbf3e9;
+$white-2: #f9f1e8;
+$white-3: #ffffff;
+
+$green-1: #8ae08f;
+$green-2: #1c4e24;
+$green-3: #74ad70;
+$green-4: #1a3c1d;
+$green-5: #486744;
+$green-6: #445940;
+$green-7: #c0dec4;
+$green-8: #8cb189;
+$green-9: #445940;
+$green-10: #86c082;
+$green-11: #7ec578;
+$green-12: #547b50;
+$green-13: #112318;
+$green-14: #2b3729;
+
+$yellow-1: #f9bb51;
+$yellow-2: #ffd374;
+
+$blue-1: #0080a8;
+$blue-2: #2b307e;
+$blue-3: #b1d4df;
+$blue-4: #0080a8;
+$blue-5: #252a59;
+
+$red-1: #ec6e5f;
+$red-2: #d62d19;
+$red-3: #f4ab9a;
+
+$pink-2: #faa69c;
+
+$black-1: #231f20;
+$grey-1: #e0e0e091;
+
+/* =====================
+    * COLORS COMBINATIONS EXPLORA ANTIOQUIA *
+===================== */
+
+$one-color-primary: $white-2;
+$one-color-secondary: $green-5;
+$two-color-primary: $blue-2;
+$two-color-secondary: $white-1;
+$three-color-primary: $green-6;
+$three-color-secondary: $black-1;
+$four-color-primary: $green-7;
+$four-color-secondary: $red-1;
+
+/* =====================
+    * BREAKPOINTS *
+===================== */
+
+$breakpoint-xs: 360px;
+$breakpoint-ss: 405px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+$breakpoint-xxxl: 1600px;
+
+/* =====================
+    * FONT-SIZE *
+===================== */
+
+$h1-font-size: 4.0625rem;
+$h2-font-size: 3.75rem;
+$h3-font-size: 3.125rem;
+$h4-font-size: 2.5rem;
+$h5-font-size: 1.68rem;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+);
+
+$p1-font-size: 1.375rem;
+$p2-font-size: 1.125rem;
+$p3-font-size: 1rem;
+$p4-font-size: 0.875rem;
+$p5-font-size: 0.7rem;
+
+@media (max-width: $breakpoint-xxl) {
+  $p1-font-size: 1.125rem;
+  $p2-font-size: 0.875rem;
+  $p3-font-size: 0.8;
+  $p4-font-size: 0.8;
+}
+
+@media (max-width: $breakpoint-sm) {
+  $p1-font-size: 1.125rem;
+  $p2-font-size: 0.875rem;
+  $p3-font-size: 0.8125rem;
+  $p4-font-size: 0.8125rem;
+  $p5-font-size: 0.5rem;
+}
