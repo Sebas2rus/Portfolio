@@ -19,6 +19,9 @@ li,
 p {
   font-family: $font-WorkSans;
 }
+body{
+  background-color: $light-navy;
+}
 scroll-container {
   overflow-y: scroll;
   scroll-behavior: smooth;

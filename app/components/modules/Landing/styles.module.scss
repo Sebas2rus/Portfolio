@@ -1,0 +1,52 @@
+.section {
+  color: $light-slate;
+  height: 80vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  &Meeting {
+    color: $green;
+  }
+
+  &Presentation {
+    font-size: 3rem;
+    word-spacing: -0.3em;
+    line-height: 1.3em;
+
+    & span {
+      color: $white;
+    }
+  }
+
+  &Description {
+    margin-top: 1.5rem;
+    @extend .is-size-2;
+    max-width: 600px;
+    line-height: 1.5em;
+
+    & span {
+      margin-left: 0.5rem;
+      display: inline-block;
+      color: $green;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
+    & span::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      background-color: $green;
+      @extend .transition;
+    }
+  }
+  &Button {
+    margin: 3rem 0 0;
+    padding: 1rem 2rem;
+  }
+}

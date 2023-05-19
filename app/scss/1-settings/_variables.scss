@@ -9,28 +9,17 @@ $font-WorkSans: 'Work Sans', sans-serif;
 ===================== */
 
 $navy: #0a192f;
+$light-navy: #112240;
+$light-slate: #a8b2d1;
 $lightest-slate: #ccd6f6;
 $green: #64ffda;
+$white: #e6f1ff;
 
+$transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.transition {
+  transition: $transition;
+}
 
 $white-1: #fbf3e9;
 $white-2: #f9f1e8;
