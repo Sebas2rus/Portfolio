@@ -1,0 +1,38 @@
+.header{
+    background-color: $navy;
+    display: flex;
+    width: 100ww;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4rem;
+    padding-left: 3rem;
+    
+    color: $lightest-slate;
+    &Logo{
+        cursor: pointer;
+    }
+
+
+    &List{
+        display: flex;
+        width: 100ww;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 4rem;
+        list-style-type: none;
+        gap: 1.5rem;
+        margin-right: 3rem;
+
+        &Link{
+            color: inherit;
+
+            & span{
+                color: $green;
+            }
+        }
+        
+        & :hover{
+            color: $green;
+        }
+    }
+}
