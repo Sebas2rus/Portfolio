@@ -1,3 +1,21 @@
-.d-none {
-  display: none;
+.underline {
+  &-crecent {
+    margin-left: 0.5rem;
+    display: inline-block;
+    color: $green;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+  &-crecent::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: $green;
+    @extend .transition;
+  }
 }

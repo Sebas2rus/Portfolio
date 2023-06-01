@@ -1,4 +1,6 @@
 .section {
+  border: solid 1px red;
+
   color: $light-slate;
   height: 80vh;
   display: flex;
@@ -24,26 +26,6 @@
     @extend .is-size-2;
     max-width: 600px;
     line-height: 1.5em;
-
-    & span {
-      margin-left: 0.5rem;
-      display: inline-block;
-      color: $green;
-      text-decoration: none;
-      cursor: pointer;
-
-      &:hover:after {
-        width: 100%;
-      }
-    }
-    & span::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 1px;
-      background-color: $green;
-      @extend .transition;
-    }
   }
   &Button {
     margin: 3rem 0 0;

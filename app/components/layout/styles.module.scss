@@ -15,7 +15,7 @@
     margin: 1rem 2rem;
   }
   &Navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -121,7 +121,7 @@
     justify-content: space-between;
     z-index: 50;
     &Left {
-      position: absolute;
+      position: fixed;
       left: 2rem;
       bottom: 0;
       display: flex;
@@ -155,7 +155,7 @@
       }
     }
     &Right {
-      position: absolute;
+      position: fixed;
       bottom: 0;
       right: 2rem;
       height: 60vh;

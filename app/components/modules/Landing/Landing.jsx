@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import AboutMe from '../AboutMe/AboutMe';
 
 export default function Landing() {
   return (
@@ -14,12 +15,13 @@ export default function Landing() {
           I’m a software engineer specializing in building (and occasionally designing)
           exceptional digital experiences. Currently, I’m focused on building accessible,
           human-centered products at
-          <span> Upstatement.</span>
+          <span className="underline-crecent"> Upstatement.</span>
         </p>
         <button className={`btn-outline-green ${styles.sectionButton}`} type="button">
           Check out my GitHub!
         </button>
       </section>
+      <AboutMe />
     </div>
   );
 }

@@ -1,10 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 
 export default function Navbar() {
   const [display, setDisplay] = useState('noVisible');
+  const [clientWindowHeight, setClientWindowHeight] = useState();
+
+  const handleScroll = () => {
+    setClientWindowHeight(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+
+  console.log(clientWindowHeight);
 
   return (
     <div>
