@@ -1,0 +1,31 @@
+.photo {
+  position: relative;
+
+  border-radius: 5px;
+
+  &Img {
+    z-index: 20;
+    position: relative;
+    border-radius: 5px;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  &Back {
+    border: solid 1px $green;
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    left: 10px;
+    height: 100%;
+    z-index: 10;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  &:hover > &Img {
+    left: -2px;
+    top: -2px;
+  }
+  &:hover > &Back {
+    left: 12px;
+    top: 7px;
+  }
+}

@@ -1,19 +1,18 @@
 .aboutMe {
   min-height: 100vh;
-  color: $light-slate;
+  color: $slate;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  &Title {
-    & span {
-      color: $green;
-    }
-  }
+  margin: 15rem 0 10rem 0;
+  padding: 0 1rem;
   &Description {
     width: 100%;
 
-    border: solid 1px red;
+    & p {
+      margin-bottom: 1rem;
+    }
   }
   &Tecnologies {
     display: flex;
@@ -29,7 +28,14 @@
     }
     & li {
       display: flex;
+      font-family: $font-mono;
+      @extend .is-size-4;
+      margin-bottom: 0.5rem;
       align-items: center;
+    }
+    &Left,
+    &Rigth {
+      width: 100%;
     }
   }
 }

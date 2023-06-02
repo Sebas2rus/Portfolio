@@ -1,15 +1,13 @@
-import Image from 'next/image';
 import React from 'react';
 import styles from './styles.module.scss';
+import SectionTitle from '@/ui/SectionTitle/SectionTitle';
+import Photo from '@/ui/Photo/Photo';
 
 export default function AboutMe() {
   return (
     <section className={styles.aboutMe}>
       <div className={styles.aboutMeDescription}>
-        <h2 className={styles.aboutMeTitle}>
-          <span>01.</span> About Me
-        </h2>
-
+        <SectionTitle title="About Me" number="01" />
         <div>
           <p>
             Hello! My name is Brittany and I enjoy creating things that live on the
@@ -46,13 +44,7 @@ export default function AboutMe() {
           </div>
         </ul>
       </div>
-      <Image
-        className={`${styles.aboutMePhoto} `}
-        alt=""
-        src="/assets/aboutMe/me.jpg"
-        width={300}
-        height={300}
-      />
+      <Photo image="/assets/aboutMe/me.jpg" width={250} height={250} alt="" />
     </section>
   );
 }

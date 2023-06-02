@@ -1,7 +1,7 @@
 .section {
   border: solid 1px red;
 
-  color: $light-slate;
+  color: $slate;
   height: 80vh;
   display: flex;
   align-items: flex-start;
@@ -12,10 +12,7 @@
   }
 
   &Presentation {
-    font-size: 3rem;
-    word-spacing: -0.3em;
-    line-height: 1.3em;
-
+    font-size: 2.5rem;
     & span {
       color: $white;
     }
