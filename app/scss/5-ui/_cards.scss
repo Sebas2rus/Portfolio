@@ -1,0 +1,61 @@
+.card {
+  &FeaturedProject {
+    background-color: $green-tint-card;
+    padding: 1.5rem 1.5rem;
+    max-width: 500px;
+    margin: 0 auto 5rem;
+
+    &Header {
+      & a:hover > &Name {
+        color: $green;
+      }
+      &Title {
+        color: $green;
+        font-family: $font-SpaceMono;
+        @extend .is-size-4;
+      }
+      &Name {
+        color: $lightest-slate;
+        @extend .is-size-1;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &Description {
+      font-size: 1rem;
+      font-family: $font-sans;
+      color: $light-slate;
+      margin-bottom: 1.5rem;
+      line-height: 1.2rem;
+    }
+
+    &Technologies {
+      display: flex;
+      flex: content;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      & li {
+        color: $white;
+        @extend .is-size-4;
+        font-family: $font-SpaceMono;
+        list-style-type: none;
+      }
+    }
+
+    &Icon {
+      color: $lightest-slate;
+      margin: 0 1rem;
+      @extend .is-size-2;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      &:hover {
+        color: $green;
+      }
+    }
+
+    &More {
+      font-weight: 500;
+    }
+  }
+}

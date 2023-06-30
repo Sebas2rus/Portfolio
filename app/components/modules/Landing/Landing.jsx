@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import AboutMe from '../AboutMe/AboutMe';
 import Work from '../Work/Work';
+import Projects from '../Projects/Projects';
 
 export default function Landing() {
   return (
@@ -24,6 +25,7 @@ export default function Landing() {
       </section>
       <AboutMe />
       <Work />
+      <Projects />
     </div>
   );
 }

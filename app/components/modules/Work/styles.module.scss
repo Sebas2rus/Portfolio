@@ -1,7 +1,6 @@
 .work {
   max-width: 800px;
   margin: auto;
-  padding: 0 1rem;
   font-family: $font-sans;
   @extend .is-size-2;
 
@@ -32,7 +31,6 @@
       }
 
       &-track {
-        // background-color: $lightest-slate;
         border: 1px solid $green;
         border-radius: 10px;
       }
@@ -44,10 +42,10 @@
       border: 0;
       cursor: pointer;
       padding-bottom: 0.5rem;
-      border-bottom: solid 3px $lightest-slate;
+      border-bottom: solid 3px $slate;
       flex: auto;
       background-color: inherit;
-      color: $lightest-slate;
+      color: $slate;
 
       &Selected {
         margin-bottom: 1rem;
@@ -94,7 +92,6 @@
     &Names {
       min-width: 6rem;
       overflow: hidden;
-      // flex: content;
       flex-direction: column;
       justify-content: start;
       height: fit-content;
@@ -103,7 +100,7 @@
         height: 3rem;
         margin: 0;
         border-bottom: 0;
-        border-left: solid 3px $lightest-slate;
+        border-left: solid 3px $slate;
         text-align: start;
         padding: 0 0 0 1rem;
         &Selected {
@@ -115,9 +112,6 @@
           border-left: solid 3px $green;
         }
       }
-    }
-    &Description {
-      // flex: 100%;
     }
   }
 }
