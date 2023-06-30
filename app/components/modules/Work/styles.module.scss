@@ -1,0 +1,123 @@
+.work {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 1rem;
+  font-family: $font-sans;
+  @extend .is-size-2;
+
+  &Names {
+    overflow-x: scroll;
+    margin-bottom: 2rem;
+    display: flex;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+
+      &:vertical {
+        width: 10px;
+      }
+
+      &-button,
+      &-button:increment {
+        display: none;
+      }
+
+      &:horizontal {
+        height: 10px;
+      }
+      &-thumb {
+        background-color: $slate;
+        border-radius: 20px;
+        border: 1px solid $green;
+      }
+
+      &-track {
+        // background-color: $lightest-slate;
+        border: 1px solid $green;
+        border-radius: 10px;
+      }
+    }
+
+    &Section {
+      margin-bottom: 1rem;
+      min-width: 5rem;
+      border: 0;
+      cursor: pointer;
+      padding-bottom: 0.5rem;
+      border-bottom: solid 3px $lightest-slate;
+      flex: auto;
+      background-color: inherit;
+      color: $lightest-slate;
+
+      &Selected {
+        margin-bottom: 1rem;
+        cursor: pointer;
+        min-width: 5rem;
+        border: 0;
+        padding-bottom: 0.5rem;
+        border-bottom: solid 3px $green;
+        flex: auto;
+        background-color: inherit;
+        color: $green;
+        transition: $transition;
+      }
+    }
+  }
+
+  &Info {
+    color: $slate;
+    font-family: $font-sans;
+    @extend .is-size-2;
+    &Title {
+      color: $lightest-slate;
+    }
+    &Dates {
+      margin-bottom: 1.5rem;
+      @extend .is-size-3;
+    }
+
+    &Description {
+      & li {
+        list-style-type: none;
+        margin-bottom: 1rem;
+        font-family: $font-sans;
+        list-style-image: url('/assets/icons/arrow-right-circle-fill.svg');
+      }
+    }
+  }
+}
+
+@include mediaMin(sm) {
+  .work {
+    display: flex;
+    gap: 3rem;
+    &Names {
+      min-width: 6rem;
+      overflow: hidden;
+      // flex: content;
+      flex-direction: column;
+      justify-content: start;
+      height: fit-content;
+
+      &Section {
+        height: 3rem;
+        margin: 0;
+        border-bottom: 0;
+        border-left: solid 3px $lightest-slate;
+        text-align: start;
+        padding: 0 0 0 1rem;
+        &Selected {
+          text-align: start;
+          margin: 0;
+          height: 3rem;
+          padding: 0 0 0 1rem;
+          border-bottom: 0;
+          border-left: solid 3px $green;
+        }
+      }
+    }
+    &Description {
+      // flex: 100%;
+    }
+  }
+}

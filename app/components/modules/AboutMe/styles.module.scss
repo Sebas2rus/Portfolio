@@ -1,12 +1,10 @@
 .aboutMe {
-  min-height: 100vh;
   color: $slate;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin: 15rem 0 10rem 0;
-  padding: 0 1rem;
+  margin: 15rem 0 5rem 0;
 
   &Description {
     width: 100%;
