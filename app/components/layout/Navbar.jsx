@@ -22,7 +22,7 @@ export default function Navbar() {
     <div>
       <header className={styles.header}>
         <Link href="#" className={styles.headerLogo}>
-          Logo
+          S
         </Link>
         <ul className={styles.headerList}>
           <li>
@@ -54,7 +54,9 @@ export default function Navbar() {
       </header>
       <header className={styles.mobile}>
         <div className={styles.mobileHeader}>
-          <a href="#">Logo</a>
+          <a href="#" className={styles.headerLogo}>
+            S
+          </a>
           <button
             type="button"
             onClick={() => setDisplay('visible')}

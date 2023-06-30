@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import AboutMe from '../AboutMe/AboutMe';
+import Work from '../Work/Work';
 
 export default function Landing() {
   return (
@@ -22,6 +23,7 @@ export default function Landing() {
         </button>
       </section>
       <AboutMe />
+      <Work />
     </div>
   );
 }

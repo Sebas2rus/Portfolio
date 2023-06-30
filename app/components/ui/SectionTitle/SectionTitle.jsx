@@ -6,7 +6,7 @@ export default function SectionTitle({ title, number }) {
       <h2 className="sectionTitle">
         <span>{number}.</span> {title}
       </h2>
-      <div className="sectionLine" />
+      <hr className="sectionLine" />
     </div>
   );
 }

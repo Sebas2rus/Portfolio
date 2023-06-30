@@ -7,16 +7,19 @@
   gap: 2rem;
   margin: 15rem 0 10rem 0;
   padding: 0 1rem;
+
   &Description {
     width: 100%;
-
     & p {
       margin-bottom: 1rem;
+      font-family: $font-sans;
+      @extend .is-size-2;
     }
   }
+
   &Tecnologies {
     display: flex;
-    margin: 1rem;
+    margin: 2rem 1rem 0;
     gap: 2rem;
     list-style-type: none;
     align-items: center;
@@ -44,7 +47,6 @@
   .aboutMe {
     &Description {
       width: 50%;
-      border: solid 1px red;
     }
   }
 }
@@ -53,7 +55,6 @@
   .aboutMe {
     &Description {
       width: 55%;
-      border: solid 1px red;
     }
   }
 }

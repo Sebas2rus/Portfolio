@@ -16,8 +16,8 @@ export default function AboutMe() {
             reblog button taught me a lot about HTML & CSS!
           </p>
           <p>
-            Fast-forward to today, and I’ve had the privilege of working at a
-            <span className="underline-crecent">n advertising agency</span>,{' '}
+            Fast-forward to today, and I’ve had the privilege of working at an
+            <span className="underline-crecent"> advertising agency</span>,{' '}
             <span className="underline-crecent">a start-up</span>,{' '}
             <span className="underline-crecent">a huge corporation</span>, and a
             student-led design studio. My main focus these days is building accessible,

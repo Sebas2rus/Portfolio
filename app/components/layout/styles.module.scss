@@ -1,6 +1,12 @@
 .header {
   @extend .is-size-3;
   display: none;
+
+  &Logo {
+    color: $green;
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
 }
 
 .invisible {

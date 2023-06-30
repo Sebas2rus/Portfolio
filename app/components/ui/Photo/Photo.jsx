@@ -8,6 +8,7 @@ export default function Photo({ width, height, alt, image }) {
       <div className="photo">
         <Image className="photoImg" src={image} alt={alt} width={width} height={height} />
         <div className="photoBack" />
+        <div className="photoCover" />
       </div>
     </div>
   );
