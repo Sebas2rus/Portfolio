@@ -1,4 +1,3 @@
-
 /* eslint-disable no-param-reassign */
 /** @type {import('next').NextConfig} */
 const path = require('path');
@@ -34,6 +33,7 @@ const nextConfig = {
       'imgix.cosmicjs.com',
       'cdn.sanity.io',
       'lh3.googleusercontent.com',
+      'localhost',
     ],
     formats: ['image/avif', 'image/webp'],
   },
