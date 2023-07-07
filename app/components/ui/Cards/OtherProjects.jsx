@@ -7,7 +7,6 @@ export default function OtherProjects({ data }) {
 
   useEffect(() => {
     if (window.innerWidth && window.innerWidth > 1400) {
-      console.log(window?.screen.width);
       setElementsNumber(6);
     }
   }, []);

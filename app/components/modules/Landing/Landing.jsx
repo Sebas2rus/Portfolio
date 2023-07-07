@@ -3,6 +3,7 @@ import styles from './styles.module.scss';
 import AboutMe from '../AboutMe/AboutMe';
 import Work from '../Work/Work';
 import Projects from '../Projects/Projects';
+import SectionTitle from '@/ui/SectionTitle/SectionTitle';
 
 export default function Landing() {
   return (
@@ -26,6 +27,20 @@ export default function Landing() {
       <AboutMe />
       <Work />
       <Projects />
+      <div className={styles.sectionContact}>
+        <SectionTitle title="What’s Next?" number="04" />
+        <p className={styles.sectionContactDescription}>
+          Although I’m not currently looking for any new opportunities, my inbox is always
+          open. Whether you have a question or just want to say hi, I’ll try my best to
+          get back to you!
+        </p>
+        <button
+          className={`btn-outline-green ${styles.sectionContactButton}`}
+          type="button"
+        >
+          Say Hello !!
+        </button>
+      </div>
     </div>
   );
 }

@@ -17,7 +17,6 @@ export default function Navbar() {
   });
 
   console.log(clientWindowHeight);
-
   return (
     <div>
       <header className={styles.header}>

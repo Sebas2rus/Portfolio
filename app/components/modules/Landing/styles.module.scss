@@ -26,4 +26,23 @@
     margin: 3rem 0 0;
     padding: 1rem 2rem;
   }
+
+  &Contact {
+    @extend .container;
+    margin-top: 8rem;
+    &Description {
+      max-width: 500px;
+      font-family: $font-sans;
+      @extend .is-size-2;
+      margin: auto;
+      color: $slate;
+      text-align: center;
+    }
+
+    &Button {
+      display: block;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem auto;
+    }
+  }
 }
