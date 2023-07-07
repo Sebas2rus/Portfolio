@@ -1,0 +1,8 @@
+.ProjectsTitle {
+  text-align: center;
+  @extend .is-size-1;
+  color: $lightest-slate;
+  &Secondary {
+    text-align: center;
+  }
+}

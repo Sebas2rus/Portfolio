@@ -1,0 +1,97 @@
+.otherProjects {
+  margin-top: 3rem;
+  position: relative;
+
+  &Card:hover > div h2 {
+    color: $green;
+  }
+
+  &Card {
+    display: block;
+    background-color: $light-navy;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    width: 100%;
+    transition: $transition;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    &Icons {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem;
+
+      &:first-child {
+        color: $green;
+        font-size: 2rem;
+      }
+      &Optional {
+        display: flex;
+        align-items: center;
+
+        & button {
+          background-color: inherit;
+          border: 0;
+        }
+      }
+    }
+
+    &Content {
+      &Title {
+        margin-bottom: 1rem;
+        @extend .is-size-2;
+        color: $lightest-slate;
+      }
+      &Description {
+        @extend .is-size-3;
+        color: $slate;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+      &Technologies {
+        display: flex;
+        flex: content;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+        & li {
+          padding: 0 0.3rem;
+          color: $white;
+          @extend .is-size-4;
+          font-family: $font-SpaceMono;
+          list-style-type: none;
+        }
+      }
+    }
+  }
+
+  &More {
+    display: block;
+    margin: auto;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@include mediaMin(md) {
+  .otherProjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 03rem auto 0;
+
+    &Card {
+      width: 48%;
+    }
+  }
+}
+
+@include mediaMin(xxl) {
+  .otherProjects {
+    &Card {
+      width: 32%;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import SectionTitle from '@/ui/SectionTitle/SectionTitle';
 import FeaturesProject from '@/ui/Cards/FeaturesProject';
+import OtherProjects from '@/ui/Cards/OtherProjects';
+import styles from './styles.module.scss';
 
 export default function Projects() {
   const projects = [
@@ -35,10 +37,67 @@ export default function Projects() {
     },
   ];
 
+  const others = [
+    {
+      name: 'Integrating Algolia Search with Wordpress Mulsite',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and firebase for a project at Upstatement',
+      technologies: ['React', 'Express', 'Spotify API', 'Styled Components'],
+      gitHubUrl: 'https://github.com/',
+      projectUrl: 'https://github.com/',
+    },
+    {
+      name: 'Integrating Algolia Search with Wordpress Mulsite',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and firebase for a project at Upstatement',
+      technologies: ['React', 'Express', 'Spotify API', 'Styled Components'],
+      gitHubUrl: 'https://github.com/',
+      projectUrl: 'https://github.com/',
+    },
+    {
+      name: 'Integrating Algolia Search with Wordpress Mulsite',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and firebase for a project at Upstatement',
+      technologies: ['React', 'Express', 'Spotify API', 'Styled Components'],
+      gitHubUrl: 'https://github.com/',
+      projectUrl: 'https://github.com/',
+    },
+    {
+      name: 'Integrating Algolia Search with Wordpress Mulsite',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and firebase for a project at Upstatement',
+      technologies: ['React', 'Express', 'Spotify API', 'Styled Components'],
+      gitHubUrl: 'https://github.com/',
+      projectUrl: 'https://github.com/',
+    },
+    {
+      name: 'Integrating Algolia Search with Wordpress Mulsite',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and firebase for a project at Upstatement',
+      technologies: ['React', 'Express', 'Spotify API', 'Styled Components'],
+      gitHubUrl: 'https://github.com/',
+      projectUrl: 'https://github.com/',
+    },
+    {
+      name: 'Integrating Algolia Search with Wordpress Mulsite',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and firebase for a project at Upstatement',
+      technologies: ['React', 'Express', 'Spotify API', 'Styled Components'],
+      gitHubUrl: 'https://github.com/',
+      projectUrl: 'https://github.com/',
+    },
+  ];
+
   return (
     <div className="container">
       <SectionTitle number="03" title="Some Things I’ve Built" />
       <FeaturesProject data={projects} />
+      <h2 className={styles.ProjectsTitle}>Other Noteworthy Projects</h2>
+      <p className={styles.ProjectsTitleSecondary}>
+        <span className=" underline-crecent">view the archive</span>
+      </p>
+
+      <OtherProjects data={others} />
     </div>
   );
 }
