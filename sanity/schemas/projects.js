@@ -14,7 +14,7 @@ export default {
             type: 'array',
             of: [
                 {
-                    name: 'projects',
+                    name: 'featuredProjects',
                     title: 'Proyectos',
                     type: 'object',
                     fields: [
@@ -34,7 +34,7 @@ export default {
             type: 'array',
             of: [
                 {
-                    name: 'projects',
+                    name: 'otherProjects',
                     title: 'Proyectos',
                     type: 'object',
                     fields: [
