@@ -26,6 +26,11 @@ export default {
           type: 'string',
         }
       ]
-    }
+    },
+    {
+      name: 'photo',
+      title: 'Foto',
+      type: 'image',
+    },
   ]
 }

@@ -16,7 +16,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
-  console.log(clientWindowHeight);
+  // console.log(clientWindowHeight);
   return (
     <div>
       <header className={styles.header}>

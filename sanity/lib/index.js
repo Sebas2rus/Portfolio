@@ -1,5 +1,11 @@
-import { getByType } from './image'
+import { getByType, getById, getByQuery, getBySlug, getCount } from './client';
+import { urlForImage } from './image'
 
 export {
-    getByType
+    getByType,
+    getById,
+    getByQuery,
+    getBySlug,
+    getCount,
+    urlForImage
 }

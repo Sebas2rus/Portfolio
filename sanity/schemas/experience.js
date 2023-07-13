@@ -9,12 +9,12 @@ export default {
       type: 'string',
     },
     {
-      name: 'description',
-      title: 'Descripción',
+      name: 'jobs',
+      title: 'Trabajos',
       type: 'array',
       of: [
         {
-          name: 'jobs',
+          name: 'jobsG',
           title: 'Trabajos',
           type: 'object',
           fields: [

@@ -16,27 +16,19 @@
   }
 
   &Tecnologies {
-    display: flex;
-    margin: 2rem 1rem 0;
-    gap: 2rem;
+    display: grid;
+    width: fit-content;
+    // border: solid 1px red;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem auto 0;
     list-style-type: none;
-    align-items: center;
-    & li::before {
-      content: '\25b6';
-      color: $green;
-      font-size: 0.5rem;
-      margin-right: 1rem;
-    }
+    // align-items: center;
     & li {
-      display: flex;
+      margin: 0.5rem 2rem;
       font-family: $font-mono;
-      @extend .is-size-4;
-      margin-bottom: 0.5rem;
       align-items: center;
-    }
-    &Left,
-    &Rigth {
-      width: 100%;
+      @extend .is-size-4;
+      list-style-image: url('/assets/icons/arrow-right-circle-fill.svg');
     }
   }
 }

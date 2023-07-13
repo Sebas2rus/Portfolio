@@ -5,26 +5,29 @@ import Work from '../Work/Work';
 import Projects from '../Projects/Projects';
 import SectionTitle from '@/ui/SectionTitle/SectionTitle';
 
-export default function Landing() {
+export default function Landing({ data }) {
+  const { authorData, aboutData } = data;
   return (
     <div className="container">
       <section className={styles.section}>
         <p className={styles.sectionMeeting}>Hi, my name is</p>
         <h1 className={styles.sectionPresentation}>
-          <span>Sebastián González</span>
+          <span>{authorData.name}</span>
           <br /> I build things for the web.
         </h1>
         <p className={styles.sectionDescription}>
-          I’m a software engineer specializing in building (and occasionally designing)
-          exceptional digital experiences. Currently, I’m focused on building accessible,
-          human-centered products at
+          {/* {authorData.description} */}
           <span className="underline-crecent"> Upstatement.</span>
         </p>
-        <button className={`btn-outline-green ${styles.sectionButton}`} type="button">
+        <a
+          href={authorData.github}
+          className={`btn-outline-green ${styles.sectionButton}`}
+          type="button"
+        >
           Check out my GitHub!
-        </button>
+        </a>
       </section>
-      <AboutMe />
+      <AboutMe aboutData={aboutData} />
       <Work />
       <Projects />
       <div className={styles.sectionContact}>
