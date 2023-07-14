@@ -50,7 +50,7 @@ export default function OtherProjects({ data }) {
                 <div className="otherProjectsCardContent">
                   <h2 className="otherProjectsCardContentTitle">{item.name}</h2>
                   <p className="otherProjectsCardContentDescription">
-                    {item.description}
+                    {/* {item.description} */}
                   </p>
                 </div>
                 <ul className="otherProjectsCardContentTechnologies">

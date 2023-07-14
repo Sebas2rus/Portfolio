@@ -16,7 +16,7 @@ export default async function userHandler(req, res) {
       );
       const workData = await getById(
         'experience-setup',
-        `title,  jobs[]{job->{company, position, activities }}`
+        `title,  jobs[]{job->{company, position, activities, dates }}`
       );
       const projectsData = await getById(
         'projects-setup',
@@ -34,7 +34,21 @@ export default async function userHandler(req, res) {
           photo: urlForImage(aboutData.photo).url()
         },
         workData,
-        projectsData,
+        projectsData: {
+          ...projectsData,
+          others: projectsData?.others.map((other) => ({
+            ...other.project,
+            image: urlForImage(other?.project.image).url()
+          })),
+          featured: projectsData?.featured.map((featured) => ({
+            ...featured.project,
+            image: urlForImage(featured?.project.image).url()
+          }))
+        }
+        // projectsData: projectsData.map(project =>({
+
+        // }))
+        ,
         contactData
       }
 

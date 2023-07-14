@@ -3,19 +3,27 @@ import Link from 'next/link';
 import React from 'react';
 
 export default function FeaturesProject({ data }) {
+  console.log(data);
+
   return (
     <div>
       {data.map((item, index) => (
         // eslint-disable-next-line react/no-array-index-key
         <div key={index} className="cardFeatured">
-          {item.image && (
-            <Link
-              className="cardFeaturedWrapper"
-              href="https://www.wextensible.com/temas/css3-alinear/block.html"
-            >
-              <Image src={item.image} width={1280} height={720} alt="Projects images" />
-            </Link>
-          )}
+          <Link
+            className="cardFeaturedWrapper"
+            href="https://www.wextensible.com/temas/css3-alinear/block.html"
+          >
+            {/* <div>{item.image}</div> */}
+            <Image
+              className="cardFeaturedWrapperImage"
+              src={item.image}
+              width={1280}
+              height={720}
+              alt="Projects images"
+            />
+          </Link>
+
           <div className="cardFeaturedProject">
             <div className="cardFeaturedProjectHeader">
               <Link
@@ -27,7 +35,14 @@ export default function FeaturesProject({ data }) {
               </Link>
             </div>
 
-            <p className="cardFeaturedProjectDescription">{item?.description}</p>
+            <p className="cardFeaturedProjectDescription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+              cupiditate laboriosam asperiores rem minus eum enim facere ipsum nulla
+              corporis numquam ut inventore repellat impedit, voluptatem, saepe incidunt
+              dignissimos! Eum inventore necessitatibus deleniti? Commodi iste nobis
+              laborum esse nam, deleniti numquam cupiditate ab, dignissimos neque
+              {/* molestiae, ipsum iure impedit magni!{item?.description} */}
+            </p>
             <ul className="cardFeaturedProjectTechnologies">
               {item?.technologies.map((technology, i) => (
                 // eslint-disable-next-line react/no-array-index-key

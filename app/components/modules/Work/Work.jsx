@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import SectionTitle from '@/ui/SectionTitle/SectionTitle';
 import styles from './styles.module.scss';
 
-export default function Work() {
+export default function Work({ workData }) {
   const [workName, setWorkName] = useState('Upstatement');
-  const works = ['Upstatement', 'Apple', 'Scout Studio', 'Starry', 'Mul'];
+  const { title, jobs } = workData;
+  const works = jobs.map((job, i) => job.job.company);
+  const workDescription = jobs.map((job, i) => job.job);
+
+  console.log(workDescription);
   return (
     <div className="container">
-      <SectionTitle title="Where I’ve Worked" number="02" />
+      <SectionTitle title={title} number="02" />
       <div className={styles.work}>
         <div className={styles.workNames}>
           {works.map((work, index) => (
@@ -26,35 +30,23 @@ export default function Work() {
             </button>
           ))}
         </div>
-
-        {workName === 'Upstatement' && (
-          <div className={styles.workInfo}>
-            <h3 className={styles.workInfoTitle}>
-              UI Engineer Co-op <span className="bg-text-emp">@</span>
-              <span className="underline-crecent"> Apple</span>
-            </h3>
-            <p className={styles.workInfoDates}>July - December 2017</p>
-            <ul className={styles.workInfoDescription}>
-              <li>
-                Developed and styled interactive web applications for Apple Music using
-                Ember and SCSS
-              </li>
-              <li>
-                Built and shipped the Apple Music Extension for Facebook Messenger
-                leveraging third-party and internal API integrations
-              </li>
-              <li>
-                Architected and implemented the user interface of Apple Music&rsquo;s
-                embeddable web player widget for in-browser user authorization and full
-                song playback
-              </li>
-              <li>
-                Contributed extensively to the creation of MusicKit JS, a public-facing
-                JavaScript SDK for embedding Apple Music players into web applications
-              </li>
-            </ul>
-          </div>
-        )}
+        {workDescription.map((work, index) => {
+          if (workName === work.company)
+            return (
+              <div key={index} className={styles.workInfo}>
+                <h3 className={styles.workInfoTitle}>
+                  {work.position} <span className="bg-text-emp">@</span>
+                  <span className="underline-crecent">{work.company}</span>
+                </h3>
+                <p className={styles.workInfoDates}>{work.dates}</p>
+                <ul className={styles.workInfoDescription}>
+                  {work?.activities.map((activity, i) => (
+                    <li key={i}>{activity}</li>
+                  ))}
+                </ul>
+              </div>
+            );
+        })}
       </div>
     </div>
   );

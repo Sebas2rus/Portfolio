@@ -30,12 +30,9 @@ const nextConfig = {
   },
   images: {
     domains: [
-      'imgix.cosmicjs.com',
       'cdn.sanity.io',
-      'lh3.googleusercontent.com',
-      'localhost',
     ],
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/webp'],
   },
 
   webpack: (config) => {

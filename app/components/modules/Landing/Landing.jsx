@@ -6,7 +6,7 @@ import Projects from '../Projects/Projects';
 import SectionTitle from '@/ui/SectionTitle/SectionTitle';
 
 export default function Landing({ data }) {
-  const { authorData, aboutData } = data;
+  const { authorData, aboutData, workData, projectsData, contactData } = data;
   return (
     <div className="container">
       <section className={styles.section}>
@@ -28,15 +28,11 @@ export default function Landing({ data }) {
         </a>
       </section>
       <AboutMe aboutData={aboutData} />
-      <Work />
-      <Projects />
+      <Work workData={workData} />
+      <Projects projectsData={projectsData} />
       <div className={styles.sectionContact}>
-        <SectionTitle title="What’s Next?" number="04" />
-        <p className={styles.sectionContactDescription}>
-          Although I’m not currently looking for any new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I’ll try my best to
-          get back to you!
-        </p>
+        <SectionTitle title={contactData.title} number="04" />
+        {/* <p className={styles.sectionContactDescription}>{contactData.description}</p> */}
         <button
           className={`btn-outline-green ${styles.sectionContactButton}`}
           type="button"
