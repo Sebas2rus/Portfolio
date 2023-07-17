@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import SectionTitle from '@/ui/SectionTitle/SectionTitle';
 import Photo from '@/ui/Photo/Photo';
+import { PortableText } from '@portabletext/react';
 
 export default function AboutMe({ aboutData }) {
   const { title, technologies, description, photo } = aboutData;
@@ -10,6 +11,9 @@ export default function AboutMe({ aboutData }) {
       <div className={styles.aboutMeDescription}>
         <SectionTitle title={title} number="01" />
         <div>
+          <PortableText value={description} />
+
+          <p></p>
           {/* <p>
             Hello! My name is Brittany and I enjoy creating things that live on the
             internet. My interest in web development started back in 2012 when I decided

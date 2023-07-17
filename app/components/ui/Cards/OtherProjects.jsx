@@ -1,3 +1,4 @@
+import { PortableText } from '@portabletext/react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
@@ -49,9 +50,10 @@ export default function OtherProjects({ data }) {
                 </div>
                 <div className="otherProjectsCardContent">
                   <h2 className="otherProjectsCardContentTitle">{item.name}</h2>
-                  <p className="otherProjectsCardContentDescription">
-                    {/* {item.description} */}
-                  </p>
+                  <PortableText
+                    className="otherProjectsCardContentDescription"
+                    value={item.description}
+                  />
                 </div>
                 <ul className="otherProjectsCardContentTechnologies">
                   {item?.technologies.map((technology, i) => (

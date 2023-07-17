@@ -4,6 +4,7 @@ import AboutMe from '../AboutMe/AboutMe';
 import Work from '../Work/Work';
 import Projects from '../Projects/Projects';
 import SectionTitle from '@/ui/SectionTitle/SectionTitle';
+import { PortableText } from '@portabletext/react';
 
 export default function Landing({ data }) {
   const { authorData, aboutData, workData, projectsData, contactData } = data;
@@ -17,6 +18,7 @@ export default function Landing({ data }) {
         </h1>
         <p className={styles.sectionDescription}>
           {/* {authorData.description} */}
+          <PortableText value={authorData.description} />
           <span className="underline-crecent"> Upstatement.</span>
         </p>
         <a
@@ -32,7 +34,10 @@ export default function Landing({ data }) {
       <Projects projectsData={projectsData} />
       <div className={styles.sectionContact}>
         <SectionTitle title={contactData.title} number="04" />
-        {/* <p className={styles.sectionContactDescription}>{contactData.description}</p> */}
+        <PortableText
+          value={contactData.description}
+          className={styles.sectionContactDescription}
+        />
         <button
           className={`btn-outline-green ${styles.sectionContactButton}`}
           type="button"

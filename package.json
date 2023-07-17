@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.4",
+    "@sanity/client": "^6.1.7",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.14.1",
     "bootstrap-icons": "^1.10.5",
     "eslint-config-next": "13.4.0",
+    "groq-js": "^1.1.9",
     "next": "13.4.0",
     "next-sanity": "^5.1.1",
     "react": "18.2.0",
