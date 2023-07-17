@@ -1,3 +1,5 @@
+import { BlockEditor } from "sanity";
+
 export default {
   name: 'author',
   title: 'Autor',
@@ -12,7 +14,29 @@ export default {
       name: 'description',
       title: 'Descripción',
       type: 'array',
-      of: [{ type: 'block' }]
+      of: [
+        {
+          type: 'block',
+          marks: [
+            {
+              title: 'Strong',
+              value: 'strong'
+            },
+            {
+              title: 'Emphasis',
+              value: 'em'
+            },
+            {
+              title: 'Sup',
+              value: 'sup',
+              BlockEditor: {
+                icon: () => <div>x<sup>2</sup></div>,
+                render: ({ children }) => <sup>{children}</sup>
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       name: 'github',

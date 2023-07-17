@@ -50,10 +50,9 @@ export default function OtherProjects({ data }) {
                 </div>
                 <div className="otherProjectsCardContent">
                   <h2 className="otherProjectsCardContentTitle">{item.name}</h2>
-                  <PortableText
-                    className="otherProjectsCardContentDescription"
-                    value={item.description}
-                  />
+                  <p className="otherProjectsCardContentDescription">
+                    <PortableText value={item.description} />
+                  </p>
                 </div>
                 <ul className="otherProjectsCardContentTechnologies">
                   {item?.technologies.map((technology, i) => (

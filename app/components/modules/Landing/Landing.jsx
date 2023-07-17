@@ -17,9 +17,8 @@ export default function Landing({ data }) {
           <br /> I build things for the web.
         </h1>
         <p className={styles.sectionDescription}>
-          {/* {authorData.description} */}
           <PortableText value={authorData.description} />
-          <span className="underline-crecent"> Upstatement.</span>
+          {/* <span className="underline-crecent"> Upstatement.</span> */}
         </p>
         <a
           href={authorData.github}
@@ -34,10 +33,9 @@ export default function Landing({ data }) {
       <Projects projectsData={projectsData} />
       <div className={styles.sectionContact}>
         <SectionTitle title={contactData.title} number="04" />
-        <PortableText
-          value={contactData.description}
-          className={styles.sectionContactDescription}
-        />
+        <p className={styles.sectionContactDescription}>
+          <PortableText value={contactData.description} />
+        </p>
         <button
           className={`btn-outline-green ${styles.sectionContactButton}`}
           type="button"

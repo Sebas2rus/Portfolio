@@ -3,7 +3,7 @@ import SectionTitle from '@/ui/SectionTitle/SectionTitle';
 import styles from './styles.module.scss';
 
 export default function Work({ workData }) {
-  const [workName, setWorkName] = useState('Upstatement');
+  const [workName, setWorkName] = useState('Parque Explora');
   const { title, jobs } = workData;
   const works = jobs.map((job, i) => job.job.company);
   const workDescription = jobs.map((job, i) => job.job);

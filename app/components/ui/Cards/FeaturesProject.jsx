@@ -35,11 +35,10 @@ export default function FeaturesProject({ data }) {
               </Link>
             </div>
 
-            <p className="cardFeaturedProjectDescription"></p>
-            <PortableText
-              className="cardFeaturedProjectDescription"
-              value={item.description}
-            />
+            <p className="cardFeaturedProjectDescription">
+              <PortableText value={item.description} />
+            </p>
+
             <ul className="cardFeaturedProjectTechnologies">
               {item?.technologies.map((technology, i) => (
                 // eslint-disable-next-line react/no-array-index-key
