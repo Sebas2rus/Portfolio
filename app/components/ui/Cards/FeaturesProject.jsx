@@ -1,11 +1,9 @@
-import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import MyPortableTextComponents from '../PortableText/MyPortableTextComponents';
 
 export default function FeaturesProject({ data }) {
-  console.log(data);
-
   return (
     <div>
       {data.map((item, index) => (
@@ -36,7 +34,7 @@ export default function FeaturesProject({ data }) {
             </div>
 
             <p className="cardFeaturedProjectDescription">
-              <PortableText value={item.description} />
+              <MyPortableTextComponents value={item.description} />
             </p>
 
             <ul className="cardFeaturedProjectTechnologies">

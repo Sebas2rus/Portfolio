@@ -6,10 +6,9 @@ import styles from './styles.module.scss';
 
 export default function Projects({ projectsData }) {
   const { others, featured, title } = projectsData;
-  console.log(projectsData);
 
   return (
-    <div className="container">
+    <div className="container" id="work">
       <SectionTitle number="03" title={title} />
       <FeaturesProject data={featured} />
       <h2 className={styles.ProjectsTitle}>Other Noteworthy Projects</h2>

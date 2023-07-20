@@ -8,9 +8,8 @@ export default function Work({ workData }) {
   const works = jobs.map((job, i) => job.job.company);
   const workDescription = jobs.map((job, i) => job.job);
 
-  console.log(workDescription);
   return (
-    <div className="container">
+    <div className="container" id="experience">
       <SectionTitle title={title} number="02" />
       <div className={styles.work}>
         <div className={styles.workNames}>

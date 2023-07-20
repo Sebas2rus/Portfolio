@@ -9,7 +9,7 @@ export default function Index() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const { data, error } = useSWR('/api/landing/', fetcher);
-  // console.log(data);
+
   if (error) return <ServerError />;
   if (!data)
     return (

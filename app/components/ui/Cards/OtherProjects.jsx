@@ -1,6 +1,6 @@
-import { PortableText } from '@portabletext/react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import MyPortableTextComponents from '../PortableText/MyPortableTextComponents';
 
 export default function OtherProjects({ data }) {
   const [elementsNumber, setElementsNumber] = useState(4);
@@ -51,7 +51,7 @@ export default function OtherProjects({ data }) {
                 <div className="otherProjectsCardContent">
                   <h2 className="otherProjectsCardContentTitle">{item.name}</h2>
                   <p className="otherProjectsCardContentDescription">
-                    <PortableText value={item.description} />
+                    <MyPortableTextComponents value={item.description} />
                   </p>
                 </div>
                 <ul className="otherProjectsCardContentTechnologies">

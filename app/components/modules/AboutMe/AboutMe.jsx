@@ -2,16 +2,16 @@ import React from 'react';
 import styles from './styles.module.scss';
 import SectionTitle from '@/ui/SectionTitle/SectionTitle';
 import Photo from '@/ui/Photo/Photo';
-import { PortableText } from '@portabletext/react';
+import MyPortableTextComponents from '@/ui/PortableText/MyPortableTextComponents';
 
 export default function AboutMe({ aboutData }) {
   const { title, technologies, description, photo } = aboutData;
   return (
-    <section className={styles.aboutMe}>
+    <section className={styles.aboutMe} id="about">
       <div className={styles.aboutMeDescription}>
         <SectionTitle title={title} number="01" />
         <div>
-          <PortableText value={description} />
+          <MyPortableTextComponents value={description} />
         </div>
         <ul className={styles.aboutMeTecnologies}>
           {technologies?.map((technology, index) => (

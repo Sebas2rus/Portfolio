@@ -17,24 +17,13 @@ export default {
       of: [
         {
           type: 'block',
-          marks: [
-            {
-              title: 'Strong',
-              value: 'strong'
-            },
-            {
-              title: 'Emphasis',
-              value: 'em'
-            },
-            {
-              title: 'Sup',
-              value: 'sup',
-              BlockEditor: {
-                icon: () => <div>x<sup>2</sup></div>,
-                render: ({ children }) => <sup>{children}</sup>
-              }
-            }
-          ]
+          marks: {
+            decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+              { title: 'Code', value: 'code' }
+            ]
+          }
         }
       ]
     },

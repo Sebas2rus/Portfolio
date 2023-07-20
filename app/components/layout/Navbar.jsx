@@ -16,7 +16,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
-  // console.log(clientWindowHeight);
   return (
     <div>
       <header className={styles.header}>
@@ -25,22 +24,22 @@ export default function Navbar() {
         </Link>
         <ul className={styles.headerList}>
           <li>
-            <Link href="#" className={styles.headerListLink}>
+            <Link href="#about" className={styles.headerListLink}>
               <span>01.</span>About
             </Link>
           </li>
           <li>
-            <Link href="#" className={styles.headerListLink}>
+            <Link href="#experience" className={styles.headerListLink}>
               <span>02.</span>Experience
             </Link>
           </li>
           <li>
-            <Link href="#" className={styles.headerListLink}>
+            <Link href="#work" className={styles.headerListLink}>
               <span>03.</span>Work
             </Link>
           </li>
           <li>
-            <Link href="#" className={styles.headerListLink}>
+            <Link href="#contact" className={styles.headerListLink}>
               <span>04.</span>Contact
             </Link>
           </li>

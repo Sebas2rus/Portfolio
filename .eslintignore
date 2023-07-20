@@ -15,3 +15,4 @@ yarn-error.log*
 .env.production.local
 _app.js
 _document.js
+jsconfig.json

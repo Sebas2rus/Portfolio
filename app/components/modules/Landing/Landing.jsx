@@ -4,10 +4,11 @@ import AboutMe from '../AboutMe/AboutMe';
 import Work from '../Work/Work';
 import Projects from '../Projects/Projects';
 import SectionTitle from '@/ui/SectionTitle/SectionTitle';
-import { PortableText } from '@portabletext/react';
+import MyPortableTextComponents from '@/ui/PortableText/MyPortableTextComponents';
 
 export default function Landing({ data }) {
   const { authorData, aboutData, workData, projectsData, contactData } = data;
+
   return (
     <div className="container">
       <section className={styles.section}>
@@ -17,7 +18,7 @@ export default function Landing({ data }) {
           <br /> I build things for the web.
         </h1>
         <p className={styles.sectionDescription}>
-          <PortableText value={authorData.description} />
+          <MyPortableTextComponents value={authorData.description} />
           {/* <span className="underline-crecent"> Upstatement.</span> */}
         </p>
         <a
@@ -31,10 +32,10 @@ export default function Landing({ data }) {
       <AboutMe aboutData={aboutData} />
       <Work workData={workData} />
       <Projects projectsData={projectsData} />
-      <div className={styles.sectionContact}>
+      <div className={styles.sectionContact} id="contact">
         <SectionTitle title={contactData.title} number="04" />
         <p className={styles.sectionContactDescription}>
-          <PortableText value={contactData.description} />
+          <MyPortableTextComponents value={contactData.description} />
         </p>
         <button
           className={`btn-outline-green ${styles.sectionContactButton}`}
