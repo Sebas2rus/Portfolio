@@ -9,10 +9,7 @@ export default function FeaturesProject({ data }) {
       {data.map((item, index) => (
         // eslint-disable-next-line react/no-array-index-key
         <div key={index} className="cardFeatured">
-          <Link
-            className="cardFeaturedWrapper"
-            href="https://www.wextensible.com/temas/css3-alinear/block.html"
-          >
+          <Link className="cardFeaturedWrapper" href={item.projectUrl} target="_blank">
             <Image
               className="cardFeaturedWrapperImage"
               src={item.image}
@@ -24,10 +21,7 @@ export default function FeaturesProject({ data }) {
 
           <div className="cardFeaturedProject">
             <div className="cardFeaturedProjectHeader">
-              <Link
-                href="https://icons.getbootstrap.com/icons/box-arrow-up-right/"
-                target="_blank"
-              >
+              <Link href={item.projectUrl} target="_blank">
                 <h4 className="cardFeaturedProjectHeaderTitle">{item?.title}</h4>
                 <h3 className="cardFeaturedProjectHeaderName">{item?.name}</h3>
               </Link>

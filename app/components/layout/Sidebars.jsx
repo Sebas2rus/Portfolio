@@ -1,21 +1,39 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-export default function Sidebars() {
+export default function Sidebars({ authorData }) {
+  // eslint-disable-next-line object-curly-newline
+  const { twitter, github, instagram, linkedin } = authorData;
   return (
     <div className={styles.sidebar}>
       <ul className={styles.sidebarLeft}>
         <li>
-          <i className="bi bi-instagram" />
+          {instagram && (
+            <a href={instagram} target="_blank" rel="noreferrer">
+              <i className="bi bi-instagram" />
+            </a>
+          )}
         </li>
         <li>
-          <i className="bi bi-linkedin" />
+          {linkedin && (
+            <a href={linkedin} target="_blank" rel="noreferrer">
+              <i className="bi bi-linkedin" />
+            </a>
+          )}
         </li>
         <li>
-          <i className="bi bi-twitter" />
+          {twitter && (
+            <a href={twitter} target="_blank" rel="noreferrer">
+              <i className="bi bi-twitter" />
+            </a>
+          )}
         </li>
         <li>
-          <i className="bi bi-github" />
+          {github && (
+            <a href={github} target="_blank" rel="noreferrer">
+              <i className="bi bi-github" />
+            </a>
+          )}
         </li>
         <li>
           <span />

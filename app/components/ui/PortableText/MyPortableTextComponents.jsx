@@ -1,13 +1,15 @@
+/* eslint-disable react/no-unstable-nested-components */
 import { PortableText } from '@portabletext/react';
 import React from 'react';
 
 export default function MyPortableTextComponents({ value }) {
   const myPortableTextComponents = {
     marks: {
-      link: ({ children, value }) => {
-        const rel = !value?.href.startsWith('/') ? 'noreferrer noopener' : undefined;
+      link: ({ children, valuei }) => {
+        const rel = !valuei?.href.startsWith('/') ? 'noreferrer noopener' : undefined;
         return (
-          <a rel={rel} href={value.href} target="_blank" className="underline-crecent">
+          // eslint-disable-next-line react/jsx-no-target-blank
+          <a rel={rel} href={valuei.href} target="_blank" className="underline-crecent">
             {children}
           </a>
         );

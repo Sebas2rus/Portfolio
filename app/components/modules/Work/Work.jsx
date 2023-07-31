@@ -5,8 +5,8 @@ import styles from './styles.module.scss';
 export default function Work({ workData }) {
   const [workName, setWorkName] = useState('Parque Explora');
   const { title, jobs } = workData;
-  const works = jobs.map((job, i) => job.job.company);
-  const workDescription = jobs.map((job, i) => job.job);
+  const works = jobs.map((job) => job.job.company);
+  const workDescription = jobs.map((job) => job.job);
 
   return (
     <div className="container" id="experience">
@@ -30,7 +30,7 @@ export default function Work({ workData }) {
           ))}
         </div>
         {workDescription.map((work, index) => {
-          if (workName === work.company)
+          if (workName === work.company) {
             return (
               <div key={index} className={styles.workInfo}>
                 <h3 className={styles.workInfoTitle}>
@@ -45,6 +45,8 @@ export default function Work({ workData }) {
                 </ul>
               </div>
             );
+          }
+          return null;
         })}
       </div>
     </div>

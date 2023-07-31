@@ -2,12 +2,13 @@ import React from 'react';
 import Navbar from './Navbar';
 import Sidebars from './Sidebars';
 
-export default function Layout({ children }) {
+export default function Layout({ children, data }) {
+  const { authorData } = data;
   return (
     <>
-      <Navbar />
+      <Navbar authorData={authorData} />
       {children}
-      <Sidebars />
+      <Sidebars authorData={authorData} />
     </>
   );
 }

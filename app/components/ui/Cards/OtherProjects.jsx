@@ -20,7 +20,8 @@ export default function OtherProjects({ data }) {
             // eslint-disable-next-line implicit-arrow-linebreak
             elementsNumber > index && (
               <Link
-                href="https://outlook.office.com/calendar/view/week"
+                href={item.projectUrl}
+                target="_blank"
                 // eslint-disable-next-line react/no-array-index-key
                 key={index}
                 className="otherProjectsCard"

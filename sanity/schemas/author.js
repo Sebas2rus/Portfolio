@@ -51,6 +51,11 @@ export default {
       name: 'email',
       title: 'Email',
       type: 'email'
+    },
+    {
+      name: 'curriculum',
+      title: 'Curriculum Vitae',
+      type: 'file'
     }
 
   ],

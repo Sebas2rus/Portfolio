@@ -3,9 +3,11 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 
-export default function Navbar() {
+export default function Navbar({ authorData }) {
   const [display, setDisplay] = useState('noVisible');
+  // eslint-disable-next-line no-unused-vars
   const [clientWindowHeight, setClientWindowHeight] = useState();
+  const { curriculum } = authorData;
 
   const handleScroll = () => {
     setClientWindowHeight(window.scrollY);
@@ -15,7 +17,6 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   });
-
   return (
     <div>
       <header className={styles.header}>
@@ -44,9 +45,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <button href="#" type="button" className="btn-outline-green a">
+            <a href={`${curriculum}?dl=`} type="button" className="btn-outline-green a">
               Resume
-            </button>
+            </a>
           </li>
         </ul>
       </header>
@@ -72,32 +73,36 @@ export default function Navbar() {
         >
           <ul className={styles.mobileNavbarList}>
             <li>
-              <Link href="#" className={styles.mobileNavbarListLink}>
+              <Link href="#about" className={styles.mobileNavbarListLink}>
                 <span>01.</span> <br />
                 About
               </Link>
             </li>
             <li>
-              <Link href="#" className={styles.headerListLink}>
+              <Link href="#experience" className={styles.headerListLink}>
                 <span>02.</span> <br />
                 Experience
               </Link>
             </li>
             <li>
-              <Link href="#" className={styles.headerListLink}>
+              <Link href="#work" className={styles.headerListLink}>
                 <span>03.</span> <br />
                 Work
               </Link>
             </li>
             <li>
-              <Link href="#" className={styles.headerListLink}>
+              <Link href="#contact" className={styles.headerListLink}>
                 <span>04.</span>
                 <br />
                 Contact
               </Link>
             </li>
             <li>
-              <button href="#" type="button" className="btn-outline-green a">
+              <button
+                href={`${curriculum}?dl=`}
+                type="button"
+                className="btn-outline-green a"
+              >
                 Resume
               </button>
             </li>
